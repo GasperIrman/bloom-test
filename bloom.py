@@ -47,7 +47,7 @@ def infer(
     print(f"Processing time was {proc_time} seconds")
     return response
 
-prompt = "HUMAN:'Testing, testing... Do we have audio? Can you hear us?'\nROBOT:'"
+prompt = open("prompt.txt").read()
 resp = infer(prompt)
 
 print(resp[0]["generated_text"])
